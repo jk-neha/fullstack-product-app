@@ -20,7 +20,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://fullstack-product-app-rust.vercel.app"
+        "https://fullstack-product-app-rust.vercel.app",
+        "https://fullstack-product-app-rust.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
