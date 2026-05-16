@@ -14,11 +14,11 @@ app=FastAPI()
 #     allow_methods=["*"],
 #     allow_headers=["*"],
 # )
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-    ],
+    allow_origins=["http://localhost:3000", "https://your-frontend-url.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
