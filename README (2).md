@@ -2,6 +2,9 @@
 
 My first fullstack project — a complete **Product Management CRUD app** built with Python, FastAPI, and PostgreSQL, deployed live across three platforms.
 
+
+<img width="1918" height="996" alt="Screenshot 2026-05-16 180818" src="https://github.com/user-attachments/assets/6f908e8b-e2c0-49d8-96eb-08b67f9c2538" />
+
 ---
 
 ## 🚀 Live Demo
@@ -119,4 +122,4 @@ This being my **first fullstack project**, here's what I got hands-on with:
 
 ## 👩‍💻 Author
 
-**Neha** — [@jk-neha](https://github.com/jk-neha)
+**Neha* Vardhini J K* — [@jk-neha](https://github.com/jk-neha)
