@@ -9,7 +9,7 @@ import "./styles/global.css";
 import "./styles/App.css";
 
 
-const API = "https://fastapi-product-backend.onrender.com"
+const API = "https://fastapi-product-backend.onrender.com";
 
 
 export default function App() {
