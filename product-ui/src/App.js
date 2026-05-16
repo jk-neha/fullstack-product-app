@@ -8,8 +8,8 @@ import StatsBar from "./components/StatsBar";
 import "./styles/global.css";
 import "./styles/App.css";
 
-const API = "http://localhost:8000";
-
+// const API = "http://localhost:8000";
+const API = "https://fastapi-product-backend.onrender.com"
 export default function App() {
   const [products, setProducts] = useState([]);
   const [filtered, setFiltered] = useState([]);
