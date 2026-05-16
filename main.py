@@ -18,14 +18,12 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "http://localhost:5173",
-        "https://fullstack-product-app-rust.vercel.app"
+        "https://fastapi-product-backend.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 database_models.Base.metadata.create_all(bind=engine)
 products = [
     Product (id=1, name="laptop",description="Asus Lap",price=55500.00,quantity=1),
@@ -58,7 +56,7 @@ def init_db():
 @app.on_event("startup")
 def startup():
     init_db()
-    
+
 ##to use it in all methids: dpenedency injection
 def get_db():
     db=SessionLocal()
