@@ -19,8 +19,6 @@ from fastapi.middleware.cors import CORSMiddleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",
-        "https://fullstack-product-app.vercel.app"
         "https://fullstack-product-app-git-main-nehas-projects-frontend.vercel.app/"
     ],
     allow_credentials=True,
