@@ -20,13 +20,14 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://fullstack-product-app-rust.vercel.app",
-        "https://fullstack-product-app-rust.vercel.app/"
+        "http://localhost:5173",
+        "https://fullstack-product-dkwkrt7az-nehas-projects-frontend.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 database_models.Base.metadata.create_all(bind=engine)
 products = [
     Product (id=1, name="laptop",description="Asus Lap",price=55500.00,quantity=1),
