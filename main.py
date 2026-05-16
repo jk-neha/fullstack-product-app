@@ -7,9 +7,20 @@ from database import engine
 from sqlalchemy.orm import Session
 app=FastAPI()
 
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost:3000"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://fullstack-product-app-rust.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -24,14 +35,30 @@ products = [
 ]
 
 
+# def init_db():
+#     db=SessionLocal()
+#     count=db.query(database_models.Product).count()
+#     if count==0:
+#         for product in products:
+#             db.add(database_models.Product(**product.model_dump()))
+#     db.commit()
+# init_db()
 def init_db():
-    db=SessionLocal()
-    count=db.query(database_models.Product).count()
-    if count==0:
-        for product in products:
-            db.add(database_models.Product(**product.model_dump()))
-    db.commit()
-init_db()
+    db = SessionLocal()
+    try:
+        count = db.query(database_models.Product).count()
+
+        if count == 0:
+            for product in products:
+                db.add(database_models.Product(**product.model_dump()))
+            db.commit()
+    finally:
+        db.close()
+
+@app.on_event("startup")
+def startup():
+    init_db()
+    
 ##to use it in all methids: dpenedency injection
 def get_db():
     db=SessionLocal()
