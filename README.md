@@ -1,10 +1,6 @@
 <div align="center">
-  
-<!-- Typing SVG Banner -->
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=24&pause=1000&color=F7F7F7&width=435&lines=%F0%9F%9B%92+CRUD+PRODUCT+APPLICATION)](https://git.io/typing-svg)
-<br/>
-<img width="1536" height="1024" alt="ChatGPT Image May 18, 2026, 02_18_08 PM" src="https://github.com/user-attachments/assets/b8e49250-383f-4a42-bfcb-d3fae8996258" />
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=24&pause=1000&color=F7F7F7&width=435&lines=%F0%9F%9B%92+CRUD+PRODUCT+APPLICATION)](https://git.io/typing-svg)
 
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
@@ -15,7 +11,9 @@
 
 <br/>
 
+<img width="1536" height="1024" alt="CRUD Product Application Banner" src="https://github.com/user-attachments/assets/b8e49250-383f-4a42-bfcb-d3fae8996258" />
 
+<br/>
 
 **[🚀 Live Demo](https://fullstack-product-app-rust.vercel.app) · [📸 Screenshots](#-results--screenshots) · [⚙️ Setup](#️-local-setup)**
 
@@ -49,43 +47,40 @@
 
 ## 🖥️ Results & Screenshots
 
-### 🖥️ User Interface
+### 🖥️ User Interface — Main Dashboard
 ![Product App UI](workings/User_Interface_Screen.png)
 
-### 🎬 CRUD Operations Demo
-
-### ➕ INSERTING PRODUCTS
-
-![User adds the product](workings/adding_product.png)
-
-![Adding Products](workings/inserting_product.png)
-
-![Products Added](workings/product_inserted.png)
 ---
 
-### ↑ UPDATING PRODUCTS
+### ➕ Create — Inserting a Product
 
-![User Updates the product](workings/update_product.png)
+| Step 1: Fill the form | Step 2: Submit | Step 3: Confirmed |
+|---|---|---|
+| ![Add product form](workings/adding_product.png) | ![Inserting product](workings/inserting_product.png) | ![Product inserted](workings/product_inserted.png) |
 
-![Updating Products](workings/updating_product.png)
-
-![Products Updated](workings/product_updated.png)
 ---
 
+### ✏️ Update — Editing a Product
 
-### 🚮 DELETING PRODUCTS
-![Deleting Products](workings/product_deleted.png)
+| Step 1: Select product | Step 2: Edit fields | Step 3: Confirmed |
+|---|---|---|
+| ![Update product](workings/update_product.png) | ![Updating product](workings/updating_product.png) | ![Product updated](workings/product_updated.png) |
 
-![Products Deleteing pop up](workings/delete_pop_up.png)
+---
 
-![Products Deleted](workings/product_deleted.png)
+### 🗑️ Delete — Removing a Product
+
+| Step 1: Trigger delete | Step 2: Confirm pop-up | Step 3: Removed |
+|---|---|---|
+| ![Delete product](workings/product_deleted.png) | ![Delete pop-up](workings/delete_pop_up.png) | ![Product deleted](workings/product_deleted.png) |
+
 ---
 
 ## 🧱 System Architecture
 
 ```
 React Frontend (Vercel)
-        ↓  HTTP Requests (fetch/axios)
+        ↓  HTTP Requests (fetch / axios)
 FastAPI Backend (Render)
         ↓  SQLAlchemy ORM
 Neon PostgreSQL (Cloud DB)
@@ -147,8 +142,16 @@ fullstack-product-app/
 ├── product-ui/              # Additional UI assets / build
 │   └── ...
 │
-└── workings/                # Demo media
+└── workings/                # Demo screenshots & video
     ├── User_Interface_Screen.png
+    ├── adding_product.png
+    ├── inserting_product.png
+    ├── product_inserted.png
+    ├── update_product.png
+    ├── updating_product.png
+    ├── product_updated.png
+    ├── delete_pop_up.png
+    ├── product_deleted.png
     └── CRUD_operations_carried_out.mp4
 ```
 
@@ -168,8 +171,8 @@ cd fullstack-product-app
 # 2. Install Python dependencies
 pip install -r requirements.txt
 
-# 3. Set up your database URL
-# Add DATABASE_URL to a .env file:
+# 3. Configure your database
+# Create a .env file and add:
 # DATABASE_URL=postgresql://user:password@host/dbname
 
 # 4. Run the FastAPI server
@@ -181,13 +184,8 @@ API runs at **http://localhost:8000** · Swagger docs at **http://localhost:8000
 ### Frontend
 
 ```bash
-# Navigate to the frontend folder
 cd frontend
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm start
 ```
 
@@ -200,15 +198,15 @@ Frontend runs at **http://localhost:3000**
 ## 🚀 How It Works
 
 ```
-1. FRONTEND  →  User interacts with React UI (view / add / edit / delete products)
+1. FRONTEND  →  User interacts with the React UI (view / add / edit / delete products)
 
-2. API CALL  →  React sends HTTP request to FastAPI backend (with CORS headers)
+2. API CALL  →  React sends an HTTP request to the FastAPI backend (with CORS headers)
 
-3. BACKEND   →  FastAPI validates request via Pydantic models
+3. BACKEND   →  FastAPI validates the request body via Pydantic models
 
-4. DATABASE  →  SQLAlchemy ORM executes query on Neon PostgreSQL
+4. DATABASE  →  SQLAlchemy ORM executes the query on Neon PostgreSQL
 
-5. RESPONSE  →  Data returned as JSON → rendered in the React UI
+5. RESPONSE  →  Result returned as JSON and rendered back in the React UI
 ```
 
 ---
