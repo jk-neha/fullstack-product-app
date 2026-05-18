@@ -53,8 +53,32 @@
 ![Product App UI](workings/User_Interface_Screen.png)
 
 ### 🎬 CRUD Operations Demo
-> ![Product App Demo](workings/CRUD_operations_carried_out.mp4)
 
+### ➕ INSERTING PRODUCTS
+
+![User adds the product](workings/adding_product.png)
+
+![Adding Products](workings/inserting_product.png)
+
+![Products Added](workings/product_inserted.png)
+---
+
+### ↑ UPDATING PRODUCTS
+
+![User Updates the product](workings/update_product.png)
+
+![Updating Products](workings/updating_product.png)
+
+![Products Updated](workings/product_updated.png)
+---
+
+
+### 🚮 DELETING PRODUCTS
+![Deleting Products](workings/product_deleted.png)
+
+![Products Deleteing pop up](workings/delete_pop_up.png)
+
+![Products Deleted](workings/product_deleted.png)
 ---
 
 ## 🧱 System Architecture
